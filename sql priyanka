@@ -1,0 +1,131 @@
+1- display all the information of the emp table.
+ans- select * from emp
+empno       ename                job                            mgr         hiredate         sal       comm      deptno     
+----------- -------------------- ------------------------------ ----------- ---------------- --------- --------- -----------
+       7369 smith                clerk                                 7902       1993-06-13    800.00       .00          20
+       7499 allen                salesman                              7698       1998-08-15   1600.00    300.00          30
+       7521 ward                 salesman                              7698       1996-03-26   1250.00    500.00          30
+       7566 jones                manager                               7839       1995-10-31   2975.00       .00          20
+       7698 blake                manager                               7839       1992-06-11   2850.00       .00          30
+       7782 clark                manager                               7839       1993-05-14   2450.00       .00          10
+       7788 scott                analyst                               7566       1996-03-05   3000.00       .00          20
+       7839 king                 president                             7566       1990-06-09   5000.00       .00          10
+       7844 turner               salesman                              7698       1994-06-04   1500.00       .00          30
+       7876 adams                clerk                                 7788       1999-06-04   1100.00       .00          20
+       7900 james                clerk                                 7698       2000-06-23    950.00       .00          30
+       7902 ford                 analyst                               7566       1997-12-05   3000.00       .00          20
+       7934 Miller               Clerk                                 7698       2000-01-21   1300.00      NULL          10
+
+
+2-display unique jobs from emp table.
+ans- select distinct job from emp group by job
+job                           
+------------------------------
+analyst                       
+Clerk                         
+manager                       
+president                     
+salesman  
+
+3-list the details of the emps in asc order of their salaries.
+ans-select * from emp order by sal asc
+  empno       ename                job                            mgr         hiredate         sal       comm      deptno     
+----------- -------------------- ------------------------------ ----------- ---------------- --------- --------- -----------
+       7369 smith                clerk                                 7902       1993-06-13    800.00       .00          20
+       7900 james                clerk                                 7698       2000-06-23    950.00       .00          30
+       7876 adams                clerk                                 7788       1999-06-04   1100.00       .00          20
+       7521 ward                 salesman                              7698       1996-03-26   1250.00    500.00          30
+       7934 Miller               Clerk                                 7698       2000-01-21   1300.00      NULL          10
+       7844 turner               salesman                              7698       1994-06-04   1500.00       .00          30
+       7499 allen                salesman                              7698       1998-08-15   1600.00    300.00          30
+       7782 clark                manager                               7839       1993-05-14   2450.00       .00          10
+       7698 blake                manager                               7839       1992-06-11   2850.00       .00          30
+       7566 jones                manager                               7839       1995-10-31   2975.00       .00          20
+       7788 scott                analyst                               7566       1996-03-05   3000.00       .00          20
+       7902 ford                 analyst                               7566       1997-12-05   3000.00       .00          20
+       7839 king                 president                             7566       1990-06-09   5000.00       .00          10
+
+4-list the details of the emps in asc order of the deptnos and desc of jobs.
+ans- select * from emp order by deptno asc,job desc
+ empno       ename                job                            mgr         hiredate         sal       comm      deptno     
+----------- -------------------- ------------------------------ ----------- ---------------- --------- --------- -----------
+       7839 king                 president                             7566       1990-06-09   5000.00       .00          10
+       7782 clark                manager                               7839       1993-05-14   2450.00       .00          10
+       7934 Miller               Clerk                                 7698       2000-01-21   1300.00      NULL          10
+       7566 jones                manager                               7839       1995-10-31   2975.00       .00          20
+       7369 smith                clerk                                 7902       1993-06-13    800.00       .00          20
+       7876 adams                clerk                                 7788       1999-06-04   1100.00       .00          20
+       7902 ford                 analyst                               7566       1997-12-05   3000.00       .00          20
+       7788 scott                analyst                               7566       1996-03-05   3000.00       .00          20
+       7844 turner               salesman                              7698       1994-06-04   1500.00       .00          30
+       7499 allen                salesman                              7698       1998-08-15   1600.00    300.00          30
+       7521 ward                 salesman                              7698       1996-03-26   1250.00    500.00          30
+       7698 blake                manager                               7839       1992-06-11   2850.00       .00          30
+       7900 james                clerk                                 7698       2000-06-23    950.00       .00          30
+
+
+
+5-display all the unique job groups in the descnding order.
+ans-select distinct job from emp order by job desc
+job                           
+------------------------------
+salesman                      
+president                     
+manager                       
+clerk                         
+analyst
+
+6-display all the details of all'mgrs'
+ans-select * from emp where job='manager'
+empno       ename                job                            mgr         hiredate         sal       comm      deptno     
+----------- -------------------- ------------------------------ ----------- ---------------- --------- --------- -----------
+       7566 jones                manager                               7839       1995-10-31   2975.00       .00          20
+       7698 blake                manager                               7839       1992-06-11   2850.00       .00          30
+       7782 clark                manager                               7839       1993-05-14   2450.00       .00          10
+
+
+
+7-list the emps who joined before 1981
+ans-select * from emp where hiredate>'1981'
+empno       ename                job                            mgr         hiredate         sal       comm      deptno     
+----------- -------------------- ------------------------------ ----------- ---------------- --------- --------- -----------
+
+
+
+
+8-list the empno,ename,sal,daily sal of all employees in the asc order of annsal
+ans-elect empno,ename,sal,sal/30 dailysal from emp order by sal*12
+empno       ename                sal       dailysal     
+----------- -------------------- --------- -------------
+       7369 smith                   800.00     26.666666
+       7900 james                   950.00     31.666666
+       7876 adams                  1100.00     36.666666
+       7521 ward                   1250.00     41.666666
+       7934 Miller                 1300.00     43.333333
+       7844 turner                 1500.00     50.000000
+       7499 allen                  1600.00     53.333333
+       7782 clark                  2450.00     81.666666
+       7698 blake                  2850.00     95.000000
+       7566 jones                  2975.00     99.166666
+       7788 scott                  3000.00    100.000000
+       7902 ford                   3000.00    100.000000
+       7839 king                   5000.00    166.666666
+
+
+9-display the empno,ename,job,hiredate,exp of all mgrs
+ans-select empno,ename,job,hiredate,DATEDIFF(month,hiredate,GETDATE()) as exp from emp where job='manager'
+empno       ename                job                            hiredate         exp        
+----------- -------------------- ------------------------------ ---------------- -----------
+       7566 jones                manager                              1995-10-31         284
+       7698 blake                manager                              1992-06-11         324
+       7782 clark                manager                              1993-05-14         313
+
+
+10-list the empno,ename,sal,exp of all emps working for mgr7839
+ans-select empno,ename,job,hiredate,DATEDIFF(month,hiredate,GETDATE()) as exp from emp where mgr=7839
+empno       ename                job                            hiredate         exp        
+----------- -------------------- ------------------------------ ---------------- -----------
+       7566 jones                manager                              1995-10-31         284
+       7698 blake                manager                              1992-06-11         324
+       7782 clark                manager                              1993-05-14         313
+
