@@ -1,0 +1,10 @@
+1. select * from emp
+2.select distinct job FROM emp
+3.select * FROM emp order by sal asc
+4.select * from emp order by deptno asc , job desc
+5.select distinct job from emp order by job desc
+6.select *from emp where job='MANAGER' 
+7.select * from emp where hiredate < '1981-01-01'
+8. select empno, ename, sal, (sal/30)  Dailysal from emp order by (sal*12)  asc 
+9. select empno, ename, job, hiredate, DATEDIFF(mm,hiredate,GETDATE()) from emp where job = 'MANAGER'  
+10.select empno, ename, sal, DATEDIFF(mm,hiredate,GETDATE())/12 as exp from emp where mgr = 7839
