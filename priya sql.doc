@@ -22,7 +22,7 @@ sql-select * from emp where job='manager'
 sql- select * from emp where hiredate<'1981';
 
 8)list the empno,ename,sal,daily sal of all employees in the asc order of annual.
-sql-select empno,ename,sal=sal/dailysal from emp  order by sal*12  asc;
+sql-select empno,ename,sal=sal/30dailysal from emp  order by sal*12  asc;
 
 9) display all the empno,ename,job,hiredate,exp of all mgrs.
 sql- select empno,ename,job,hiredate DATEDIFF(mm,'hiredate',getdate())/1 as exp from emp where job='manager';
