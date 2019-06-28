@@ -1,0 +1,32 @@
+Name:priya Manjarekar.
+                                     SQL Queries:-
+1)display all the information of the emp table:
+sql- use emp_dept;
+     select * from emp;
+2) display unique jobs from emp table.
+ sql- select distinct job from emp;
+
+3) list the details of the emps in asc order of their salaries.
+sql- select * from emp order by sal asc;
+
+4)list the details of the emps in asc order of the deptnos and desc of job.
+sql-select * from emp order by deptno asc,job desc;
+
+5)Display all the unique job groups in the desending order.
+sql- select distinct job from emp order by job desc;
+
+6)display all the details of all 'mgrs'.
+sql-select * from emp where job='manager'
+
+7) list the emp who joined before 1981.
+sql- select * from emp where hiredate<'1981';
+
+8)list the empno,ename,sal,daily sal of all employees in the asc order of annual.
+sql-select empno,ename,sal=sal/dailysal from emp where sal*12 order by sal asc;
+
+9) display all the empno,ename,job,hiredate,exp of all mgrs.
+sql- select empno,ename,job,hiredate exp=(mm,'hiredate',getdate())/12exp from emp where job='manager';
+
+10) list the empno,ename,sal,exp of all emps working for mgr.
+
+sql- select empno,ename,sal exp=(mm,'hiredate',getdate())/12 from emp where mgr=7839
