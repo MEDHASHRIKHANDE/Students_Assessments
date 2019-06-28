@@ -1,0 +1,36 @@
+NAME: VISHAL KUMAR GUPTA
+
+SQL QUERRIES
+
+
+Q.1 Display all the information of the emp table.
+ANS. Select * from emp;
+
+Q.2 Display unique jobs from EMP table.
+ANS.SELECT DISTINCT Job FROM EMP;
+
+Q.3List the details of the emps in asc order of their salaries.
+ANS.SELECT * FROM EMP ORDER BY Sal ASC ;
+
+Q.4 List the details of the emps in asc order of the Deptnos and desc of Jobs.
+ANS.SELECT * FROM EMP  ORDER BY Deptno ASC, Job DESC ;
+
+Q.5 Display all the unique job groups in the descending order.
+ANS.select unique job from emp order by job desc ;  
+
+Q.6 Display all the details of all ‘Mgrs’.
+ANS.select * from emp where job = ‘MANAGER’ ; 
+
+Q.7 List the emps who joined before 1981.
+ANS.select * from emp where hiredate < ’1981-01-01′ ;
+
+Q.8 List the Empno, Ename, Sal, Daily Sal of all Employees in the ASC order of AnnSal.
+ANS.SELECT Empno, Ename, salary, Salary/30 DailySal
+FROM Emp ORDER BY Sal*12 ;
+
+Q.9 Display the empno , ename, job, hiredate, exp of all Mgrs.
+ANS.select empno, ename, salary,months_between(sysdate,hiredate)/12 Exp from emp where job = ‘MANAGER’ ;
+
+Q.10 .List the empno, ename, sal, exp of all emps working for Mgr 7839.
+ANS.select empno, ename, salary,months_between(sysdate,hiredate)/12 Exp
+from emp B where Mgr = 7839 ; 
