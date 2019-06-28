@@ -1,0 +1,39 @@
+use testDb
+ 1.	Display all the information of the emp table.
+    Select * from emp ;
+   
+2.  Display unique jobs from EMP table.
+     SELECT DISTINCT Job FROM EMP GROUP BY Job ;
+
+3.	List the details of the emps in asc order of their salaries.
+    SELECT * FROM EMP
+    ORDER BY Sal ASC ;
+   
+    4.	List the details of the emps in asc order of the Deptnos and desc of Jobs.
+      SELECT * FROM EMP
+      ORDER BY Deptno ASC, Job DESC ;
+     
+5.	Display all the unique job groups in the descending order
+        select DISTINCT job from emp order by job desc ;
+       
+  6.	Display all the details of all ‘Mgrs’
+            select * from emp where job ='MANAGER' ;
+           
+           
+      7. List the emps who joined before 1981.
+         select * from emp where hiredate < '1981-01-01';
+        
+        8.	List the Empno, Ename, Sal, Daily Sal of all Employees in the ASC order of AnnSal.
+            SELECT Empno, Ename, sal, Sal/30 DailySal
+             FROM Emp ORDER BY Sal*12 ;
+
+
+9.	Display the empno , ename, job, hiredate, exp of all Mgrs
+          select empno, ename, sal,Hiredate DATEDIFF(month,hiredate,GETDATE())/12 as EXP 
+         from emp where job = ‘MANAGER’ ;
+
+
+10.	List the empno, ename, sal, exp of all emps working for Mgr 7839.
+	select empno, ename, sal,Hiredate DATEDIFF(month,hiredate,GETDATE())/12 as EXP Exp
+
+from emp B where Mgr = 7839 ;
