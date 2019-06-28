@@ -1,0 +1,202 @@
+1) Display all the information of emp table
+output:-
+1>select * from emp1;
+2> go
+empno       ename                job        mgr        hiredate         sal       comm      deptno     
+----------- -------------------- ---------- ---------- ---------------- --------- --------- -----------
+       7369 SMITH                CLERK      7920             1993-06-13    800.00       .00          20
+       7499 ALLEN                SALESMAN   7698             1998-08-15   1600.00    300.00          30
+       7521 WARD                 SALESMAN   7698             1996-03-26   1250.00    500.00          30
+       7698 BLAKE                MANAGER    7839             1995-10-31   2975.00       .00          20
+       7782 CLARK                MANAGER    7839             1993-05-14   2450.00       .00          10
+       7788 SCOTT                ANALYST    0                1990-03-05   3000.00       .00          20
+       7844 KING                 PRESIDENT  0                1990-06-09   5000.00       .00          10
+       7844 TURNER               SALESMAN   7698             1995-06-04   1500.00       .00          30
+       7876 ADAMS                CLERK      7788             1999-06-04   1100.00       .00          30
+       7900 JAMES                CLERK      7698             2000-06-23    950.00       .00          30
+       7934 MILLER               CLERK      7782             2000-01-21   1300.00       .00          10
+       7902 FORD                 ANALYST    7566             1997-12-05   3000.00       .00          20
+       7654 MARTIN               SALESMAN   7698             1998-12-05   1250.00   1400.00          30
+
+(13 rows affected)
+
+
+*****
+
+
+2)Display unique job from emp table.
+output:-
+1>select distinct job from emp1;
+2> go
+job       
+----------
+ANALYST   
+CLERK     
+MANAGER   
+PRESIDENT 
+SALESMAN  
+
+(5 rows affected)
+
+
+*****
+
+
+
+3) List the details of the qmps in asc order of their salaries
+output:-
+1>select * from emp1 order by sal asc;
+2> go
+empno       ename                job        mgr        hiredate         sal       comm      deptno     
+----------- -------------------- ---------- ---------- ---------------- --------- --------- -----------
+       7369 SMITH                CLERK      7920             1993-06-13    800.00       .00          20
+       7900 JAMES                CLERK      7698             2000-06-23    950.00       .00          30
+       7876 ADAMS                CLERK      7788             1999-06-04   1100.00       .00          30
+       7521 WARD                 SALESMAN   7698             1996-03-26   1250.00    500.00          30
+       7654 MARTIN               SALESMAN   7698             1998-12-05   1250.00   1400.00          30
+       7934 MILLER               CLERK      7782             2000-01-21   1300.00       .00          10
+       7844 TURNER               SALESMAN   7698             1995-06-04   1500.00       .00          30
+       7499 ALLEN                SALESMAN   7698             1998-08-15   1600.00    300.00          30
+       7782 CLARK                MANAGER    7839             1993-05-14   2450.00       .00          10
+       7698 BLAKE                MANAGER    7839             1995-10-31   2975.00       .00          20
+       7788 SCOTT                ANALYST    0                1990-03-05   3000.00       .00          20
+       7902 FORD                 ANALYST    7566             1997-12-05   3000.00       .00          20
+       7844 KING                 PRESIDENT  0                1990-06-09   5000.00       .00          10
+
+(13 rows affected)
+
+
+*****
+
+
+ 
+4) List the details of the emps in asc order of the Deptno and desc of jobs.
+output:-
+1>select * from emp1 order by deptno asc,job desc;
+2> go
+empno       ename                job        mgr        hiredate         sal       comm      deptno     
+----------- -------------------- ---------- ---------- ---------------- --------- --------- -----------
+       7844 KING                 PRESIDENT  0                1990-06-09   5000.00       .00          10
+       7782 CLARK                MANAGER    7839             1993-05-14   2450.00       .00          10
+       7934 MILLER               CLERK      7782             2000-01-21   1300.00       .00          10
+       7698 BLAKE                MANAGER    7839             1995-10-31   2975.00       .00          20
+       7369 SMITH                CLERK      7920             1993-06-13    800.00       .00          20
+       7788 SCOTT                ANALYST    0                1990-03-05   3000.00       .00          20
+       7902 FORD                 ANALYST    7566             1997-12-05   3000.00       .00          20
+       7654 MARTIN               SALESMAN   7698             1998-12-05   1250.00   1400.00          30
+       7499 ALLEN                SALESMAN   7698             1998-08-15   1600.00    300.00          30
+       7521 WARD                 SALESMAN   7698             1996-03-26   1250.00    500.00          30
+       7844 TURNER               SALESMAN   7698             1995-06-04   1500.00       .00          30
+       7876 ADAMS                CLERK      7788             1999-06-04   1100.00       .00          30
+       7900 JAMES                CLERK      7698             2000-06-23    950.00       .00          30
+
+(13 rows affected)
+
+
+*****
+
+
+
+
+5) Display all the unique job groups in the descending order
+output:-
+1>select distinct job from emp1 order by job desc;
+2> go
+job       
+----------
+SALESMAN  
+PRESIDENT 
+MANAGER   
+CLERK     
+ANALYST   
+
+(5 rows affected)
+
+
+*****
+
+
+
+6) Display all the details of all 'mgrs'
+output:-
+1>select * from emp1 where job='manager';
+2> go
+empno       ename                job        mgr        hiredate         sal       comm      deptno     
+----------- -------------------- ---------- ---------- ---------------- --------- --------- -----------
+       7698 BLAKE                MANAGER    7839             1995-10-31   2975.00       .00          20
+       7782 CLARK                MANAGER    7839             1993-05-14   2450.00       .00          10
+
+(2 rows affected)
+
+
+*****
+
+
+
+7) List the emps who joined before 1981
+output:-
+1>select * from emp1 where hiredate <'1981';
+2> go
+empno       ename                job        mgr        hiredate         sal       comm      deptno     
+----------- -------------------- ---------- ---------- ---------------- --------- --------- -----------
+
+(0 rows affected)
+
+
+*****
+
+
+
+8) List the empno,ename,sal,daily sal of all employee in the asc order of anul
+output:-
+1>select empno,ename,sal,sal/30 dailysal,sal*12 annsal from emp1 order by  annsal asc;
+2> go
+empno       ename                sal       dailysal      annsal      
+----------- -------------------- --------- ------------- ------------
+       7369 SMITH                   800.00     26.666666      9600.00
+       7900 JAMES                   950.00     31.666666     11400.00
+       7876 ADAMS                  1100.00     36.666666     13200.00
+       7521 WARD                   1250.00     41.666666     15000.00
+       7654 MARTIN                 1250.00     41.666666     15000.00
+       7934 MILLER                 1300.00     43.333333     15600.00
+       7844 TURNER                 1500.00     50.000000     18000.00
+       7499 ALLEN                  1600.00     53.333333     19200.00
+       7782 CLARK                  2450.00     81.666666     29400.00
+       7698 BLAKE                  2975.00     99.166666     35700.00
+       7788 SCOTT                  3000.00    100.000000     36000.00
+       7902 FORD                   3000.00    100.000000     36000.00
+       7844 KING                   5000.00    166.666666     60000.00
+
+(13 rows affected)
+
+
+*****
+
+
+9)
+Display the empno,ename, job,hiredate,exp of all mrg
+output:-
+1>select empno,ename,job,hiredate,DATEDIFF(month,hiredate,GETDATE()) as EXP from emp1 where job='manager';
+2> go
+empno       ename                job        hiredate         EXP        
+----------- -------------------- ---------- ---------------- -----------
+       7698 BLAKE                MANAGER          1995-10-31         284
+       7782 CLARK                MANAGER          1993-05-14         313
+
+(2 rows affected)
+
+
+*****
+
+
+10) List the empno,enam,sal,exp of all emps working for mgr 7839
+output:-
+1>select empno,ename,job,mgr,hiredate,DATEDIFF(month,hiredate,GETDATE()) as EXP from emp1 where mgr=7839;
+2> go
+empno       ename                job        mgr        hiredate         EXP        
+----------- -------------------- ---------- ---------- ---------------- -----------
+       7698 BLAKE                MANAGER    7839             1995-10-31         284
+       7782 CLARK                MANAGER    7839             1993-05-14         313
+
+(2 rows affected)
+
