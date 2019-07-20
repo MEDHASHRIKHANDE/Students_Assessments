@@ -1,0 +1,29 @@
+1) What does PHP stand for?
+-> a) both i and ii.
+
+2)Who is tha father of PHP?
+-> a) Rasmaus Lerdorf.
+
+3)PHP files have a default file extension of ?
+-> c) .php  
+
+4)A PHP script should start with ___ and with ___:
+-> d) <? php ?>.
+
+5)Which of the looping statement is/are supoorted by php?
+-> c) All of the mention.
+
+6)which of the following is are the php editor?
+-> b) All of the mention.
+
+7)which of the  following must be installed on your computer so as to run php script?
+-> d) ii and iii,iv.
+
+8)we can use __ of to comment a single line?
+-> c) ii and iii,iv.
+
+9) Which of the below symbols is a newline character?
+-> b) \n. 
+	
+10)which of the following php statement/statements will store  111 in variable?
+-> c) $num = 111.
