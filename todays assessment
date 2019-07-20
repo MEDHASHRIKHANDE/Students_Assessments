@@ -1,0 +1,82 @@
+1. What does PHP stand for?
+i) Personal Home Page
+ii) Hypertext Preprocessor
+iii) Pretext Hypertext Processor
+iv) Preprocessor Home Page
+
+Ans:Personal Home Page and Hypertext Preprocessor.
+
+
+2. Who is the father of PHP?
+A. Rasmus Lerdorf
+B. Willam Makepiece
+C. Drek Kolkevi
+D. List Barely
+
+Ans: Rasmus Lerdorf.
+
+3. PHP files have a default file extension of.
+A. .html
+B. .xml
+C. .php
+D. .ph
+
+Ans: .php
+
+4. A PHP script should start with ___ and end with ___:
+A.
+< php >
+B.
+< ? php ?>
+C.
+< ? ? >
+D.
+< ?php ? >
+
+Ans: < ?php ? >
+
+
+5. whoch of the looping statements is/are supported by PHP?
+  i)for loop
+  ii)while loop
+  iii)do-while loop
+  iv)foreach loop
+Ans: All of the statements.
+
+6.which of the following is/are a PHP code editor?
+i)Notepad
+ii)Notepad++
+iii)Adobe Dreamweaver
+iv)PDT
+Ans: All of this.
+
+7. which of the following must be installed on your computer so as to run PHP script?
+i)Adobe Dreamweaver
+ii)PHP
+iii)Apache
+iv)IIS
+Ans:Apache, PHP, IIS.
+
+8. Which of the below symbols is a newline character?
+A. \r
+B. \n
+C. /n
+D. /r
+
+Ans:\n
+
+9. We can use ___ to comment a single line?
+i) /?
+ii) //
+iii) #
+iv) /* */
+
+Ans: ii) iii) and iv)
+
+10. Which of the following php statement/statements will store 111 in variable num?
+i) int $num = 111;
+ii) int mum = 111;
+iii) $num = 111;
+iv) 111 = $num;
+
+Ans: $num = 111;
